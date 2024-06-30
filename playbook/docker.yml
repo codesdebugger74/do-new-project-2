@@ -4,6 +4,12 @@
     become: yes
     hosts: all
     tasks:
+     - name: stop container
+       shell: docker stop local-server
+     - name: remove container
+       shell: docker rm local-server
+     - name: remove image
+       shell: docker rmi codesdebugger74/do-new-project-2
      - name: create container
        shell: docker run -itd --name local-server -p 80:80 codesdebugger74/do-new-project-2
 ...
