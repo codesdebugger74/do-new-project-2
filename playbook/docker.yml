@@ -5,5 +5,5 @@
     hosts: all
     tasks:
      - name: create container
-       shell: docker run -itd local-server -p 80:80 codesdebugger74/do-new-project-2
+       shell: docker run -itd --name local-server -p 80:80 codesdebugger74/do-new-project-2
 ...
