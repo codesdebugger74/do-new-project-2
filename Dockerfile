@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get install -y apache2 curl
 COPY sourcecode/ /var/www/html/
 WORKDIR /var/www/html
-ENTRYPOINT ["/usr/bin/apache2ctl"]
+ENTRYPOINT ["/usr/sbin/apache2ctl"]
 CMD ["-D", "FOREGROUND"]
 EXPOSE 80
 
