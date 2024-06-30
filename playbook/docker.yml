@@ -1,0 +1,9 @@
+---
+  - name: Manage Docker
+    connection: ssh
+    become: yes
+    hosts: all
+    tasks:
+     - name: create container
+       shell: docker run -itd local-server -p 80:80 codesdebugger74/do-new-project-2
+...
